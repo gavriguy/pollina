@@ -1,0 +1,113 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>myapp</title>
+
+<style type="text/css">
+*                                       { -webkit-user-select: none; }
+HTML, BODY                              { padding: 0; margin: 0; height: 100%;}
+BODY                                    { -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: 'lucida grande',tahoma,verdana,arial,sans-serif; color: #000; background: #000}
+
+.clearfix:after                         { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix                               { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix                        { height: 1%; }
+.clearfix                               { display: block; }
+/* close commented backslash hack */
+
+.slider                                 { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index; 1; overflow: hidden; }
+.slider UL                              { position: absolute; top: 0; }
+.slider LI                              { float: left; position: relative;}
+.slider LI IFRAME {position: absolute; top:0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;} 
+
+.statistics 							{ position: relative; width: 480px; height: 320px; margin: auto; background: url("statistics.png") no-repeat; }
+.statistics2 { position: relative; width: 480px; height: 320px; margin: auto; background: url("statistics1.png") no-repeat; }
+
+.poll { position: relative; width: 480px; height: 320px; margin: auto; background: url("no-activity.png") no-repeat; }
+
+
+
+.statistics .score 						{ position: absolute; top: 44px; left: 144px; font-size: 40px; color: #FFF; font-family: "Trebuchet MS"; text-align: center; }
+
+.video                                  { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; height: 100%; width: 100%}
+
+.number {
+    overflow: hidden;
+    position: relative;
+
+}
+
+.number span {
+    position: relative;
+    
+
+}
+.swipeBox {
+	z-index: 100;
+width: 100%;
+margin: auto;
+position: absolute;
+top: 110px;
+bottom: 150px;
+}
+.notification                           { display: none; position: absolute; left: 10%; z-index: 10; width: 205px; height: 90px; background: url("activity.png") no-repeat; } 
+.static-notification                    { display: none; position: absolute; left: 5px; top: 10%; bottom: 10%; z-index: 9; width: 1px;  height: 80%;  background: rgba(255, 216, 0, 1);
+	
+-moz-box-shadow: 0 0 10px  rgba(255, 216, 0, 1);
+-webkit-box-shadow: 0 0 10px  rgba(255, 216, 0, 1);
+box-shadow: 0 0 10px  rgba(255, 216, 0, 1), 0 0 5px } 
+
+.ftue                                   { display:none; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 30; background: url("ftue.png") no-repeat center center; }
+
+
+</style>
+
+</head>
+
+<body>
+<div class="notification"></div>
+<div class="static-notification"></div>
+<div class="ftue"></div>
+
+
+  
+  	<video class="video" loop autoplay>
+  <source src="aaa.m4v" >
+Your browser does not support the video tag.
+</video>
+
+  <div class="slider">
+    <ul>
+        <li class="overlay1">
+        
+        		<div class="poll"></div>
+        	
+        </li>
+        <li class="overlay2"></li>
+        <li class="overlay3">
+        	<div class="statistics">
+        		<span class="score number">1</span>
+        	</div>
+        </li>
+        <li class="overlay4">
+        	<div class="statistics2">
+        		
+        	</div>
+
+        </li>
+    </ul>
+</div>
+
+
+
+ 
+</body>
+
+<template name="hello">
+  <h1>Hello World!!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
+
